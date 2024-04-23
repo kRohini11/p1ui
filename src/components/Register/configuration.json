@@ -1,0 +1,126 @@
+[
+    {
+        "tag": "input",
+        "name": "name",
+        "label": "Full Name:",
+        "type": "text",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED"
+        ]
+    },
+    {
+        "tag": "input",
+        "name": "uid",
+        "label": "User Id:",
+        "type": "text",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED",
+            "EMAIL"
+        ]
+    },
+    {
+        "tag": "input",
+        "name": "pwd",
+        "label": "Password:",
+        "type": "password",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED",
+            "MIN5CHARS"
+        ]
+    },
+    {
+        "tag": "input",
+        "name": "rollno",
+        "label": "Roll No:",
+        "type": "number",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED"
+        ]
+    },
+    {
+        "tag": "input",
+        "name": "gen",
+        "label": "Gender:",
+        "type": "radio",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED"
+        ],
+        "options": [
+            "Male",
+            "Female"
+        ],
+        "values": [
+            "M",
+            "F"
+        ]
+    },
+    {
+        "tag": "input",
+        "name": "hobbies",
+        "label": "Hobbies:",
+        "type": "checkbox",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED"
+        ],
+        "options": [
+            "Cricket",
+            "Football",
+            "Hockey"
+        ],
+        "values": [
+            "CR",
+            "FB",
+            "HO"
+        ]
+    },
+    {
+        "tag": "select",
+        "name": "country",
+        "label": "Country:",
+        "options": [
+            "India",
+            "China",
+            "Africa"
+        ],
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED"
+        ],
+        "values": [
+            "I",
+            "C",
+            "A"
+        ]
+    },
+    {
+        "tag": "textarea",
+        "name": "address",
+        "label": "Address:",
+        "errMsg": "",
+        "isShowError": false,
+        "value": "",
+        "criteria": [
+            "REQUIRED"
+        ]
+    }
+]

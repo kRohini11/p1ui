@@ -1,0 +1,14 @@
+.homeImgAnim {
+    animation: imgAnim 10s;
+}
+
+@keyframes imgAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

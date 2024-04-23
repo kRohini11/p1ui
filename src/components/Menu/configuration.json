@@ -1,0 +1,20 @@
+{
+    "menuItems": [
+        {
+            "id": "home",
+            "link": "home",
+            "text": "Home"
+        },
+        {
+            "id": "profile",
+            "link": "profile",
+            "text": "Profile"
+        },
+        {
+            "id": "users",
+            "link": "users",
+            "text": "Users"
+        }
+    ],
+    "data": []
+}

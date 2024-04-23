@@ -1,0 +1,45 @@
+.homeHeading {
+    animation: headerAnim 5s;
+}
+
+.headingText {
+    animation: headingTextAnim 2s;
+    transform: translate(100px, 100px);
+}
+
+.headerText2 {
+    top: 250px;
+    animation: headerText2Anim 0.5s;
+}
+
+@keyframes headerText2Anim {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 20px;
+    }
+}
+
+@keyframes headerTextAnim {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(100px, 100px);
+    }
+}
+
+@keyframes headerAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,56 @@
+.menu {
+    text-align: right;
+    background: rgb(198, 166, 166);
+    line-height: 35px;
+}
+
+.mobileMenu {
+    background: #a6a6b7;
+    /* background: rgb(198, 166, 166); */
+    width: 150px;
+    display: inline-block;
+    padding: 10px !important;
+    position: absolute;
+    transition: left 2s;
+}
+
+.menu>li {
+    display: inline;
+    letter-spacing: 5px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.mobileMenu>li {
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.menu a:hover,
+.mobileMenu a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.menu a,
+.mobileMenu a {
+    color: white;
+    text-decoration: none;
+}
+
+.mobileMenuBtn {
+    position: absolute;
+    right: 0;
+}
+
+.mobileMenuBtn>span {
+    width: 25px;
+    display: block;
+    border: 1px solid;
+    margin: 3px 0px;
+}
+
+.active>a {
+    color: blue !important;
+}
