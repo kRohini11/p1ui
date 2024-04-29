@@ -7,7 +7,7 @@ const Input = ({ label, type,readonly, errMsg, isShowError, handleChange, values
             case 'text':
             case 'password':
             case 'number':
-                return <input disabled={readonly} value={value} name={name} onChange={handleChange} className="form-control" type={type} />
+                return <input id={name} disabled={readonly} value={value} name={name} onChange={handleChange} className="form-control" type={type} />
             case 'radio':
                 return <div>
                     {

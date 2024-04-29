@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import styles from './Menu.module.css'
-import { data, menuItems } from './configuration.json'
+import configuration from './configuration.json'
 import Link from 'next/link'
 import { Cookies } from '@/common/api/Cookies'
 import { appStore } from '@/redux/store/appStore'
@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation'
 
 
 export const Menu = () => {
+    const {data,menuItems}=configuration
     const [isShowModal, setIsShowModal] = useState(false)
     const [isMobileView, setIsMobileView] = useState(document?.body?.offsetWidth < 700);
     const [left, setLeft] = useState(-150)

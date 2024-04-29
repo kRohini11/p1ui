@@ -14,7 +14,7 @@ const Modal = (props) => {
                             OK
                         </button>
                     )}
-                    <button className="btn btn-primary" onClick={fnClose} >
+                    <button className="btn btn-primary" data-testid="modalCloseBtn" onClick={fnClose} >
                         CLOSE
                     </button>
                 </div>

@@ -3,6 +3,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import styles from './Home.module.css'
+import Image from 'next/image'
 
 const Home = () => {
   const imgRef = useRef()
@@ -22,14 +23,17 @@ const Home = () => {
   }, [])
 
   const isElementPartiallyVisible = (element) => {
-    var rect = element.getBoundingClientRect();
-    var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+    if (typeof window !== 'undefined') {
+      ;
+      var rect = element.getBoundingClientRect();
+      var windowHeight = (window.innerHeight || window.documentdocumentElement.clientHeight);
+      var windowWidth = (window.innerWidth || window.documentdocumentElement.clientWidth);
 
-    var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-    var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+      var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+      var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
 
-    return (vertInView && horInView);
+      return (vertInView && horInView);
+    }
   }
 
   return (
@@ -37,7 +41,7 @@ const Home = () => {
       <h3 className={`text-center my-3 ${styles.homeHeading}`}>Welcome</h3>
       <p>
         Helping Businesses Grow with Innovative IT Solutions
-        Welcome to Vision Techno Services! We specialize in providing comprehensive IT solutions that empower businesses to thrive. From custom software development to innovative tech solutions, we harness cutting-edge technologies to optimize processes, enhance productivity, and drive growth, enabling our clients to stay ahead in today's digital landscape.
+        Welcome to Vision Techno Services! We specialize in providing comprehensive IT solutions that empower businesses to thrive. From custom software development to innovative tech solutions, we harness cutting-edge technologies to optimize processes, enhance productivity, and drive growth, enabling our clients to stay ahead in todays digital landscape.
       </p>
       <div className='row'>
         <div className='col-6 position-relative'>
@@ -51,7 +55,7 @@ const Home = () => {
           </div>
         </div>
         <div className='col-6'>
-          <img ref={imgRef} id="homeImg" className={`w-100 ${styles.homeImg}`} src="home.png"></img>
+          <Image alt="" ref={imgRef} id="homeImg" className={`w-100 ${styles.homeImg}`} src="home.png"></Image>
 
         </div>
 

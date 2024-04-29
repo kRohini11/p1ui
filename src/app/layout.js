@@ -12,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <title>etoe</title>
       <body className={inter.className}>
         <Provider store={appStore}>
           <RootLayoutWrapper>
