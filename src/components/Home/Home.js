@@ -26,8 +26,8 @@ const Home = () => {
     if (typeof window !== 'undefined') {
       ;
       var rect = element.getBoundingClientRect();
-      var windowHeight = (window.innerHeight || window.documentdocumentElement.clientHeight);
-      var windowWidth = (window.innerWidth || window.documentdocumentElement.clientWidth);
+      var windowHeight = (window.innerHeight || window.document.documentElement.clientHeight);
+      var windowWidth = (window.innerWidth || window.document.documentElement.clientWidth);
 
       var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
       var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
@@ -55,8 +55,7 @@ const Home = () => {
           </div>
         </div>
         <div className='col-6'>
-          <Image alt="" ref={imgRef} id="homeImg" className={`w-100 ${styles.homeImg}`} src="home.png"></Image>
-
+          <Image alt="" ref={imgRef} id="homeImg" className={`w-100 ${styles.homeImg}`} width="100" height="500" src="/home.png" />
         </div>
 
       </div>

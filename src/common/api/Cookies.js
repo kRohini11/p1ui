@@ -19,29 +19,29 @@ export class Cookies {
     static setCookie(key, value, days) {
         if (typeof window !== 'undefined') {
             if (days) {
-                window.documentcookie = `${key}=${value};expires=${getDate(days)}`
+                window.document.cookie = `${key}=${value};expires=${getDate(days)}`
             }
             else {
-                window.documentcookie = `${key}=${value}`
+                window.document.cookie = `${key}=${value}`
             }
         }
     }
     static getCookie(key) {
         if (typeof window !== 'undefined') {
-            const cookieObj = getCookieObject(window.documentcookie)
+            const cookieObj = getCookieObject(window.document.cookie)
             return cookieObj[key];
         }
     }
     static deleteCookie(key) {
         if (typeof window !== 'undefined') {
-            window.documentcookie = `${key}=;expires=${getDate(-1)}`
+            window.document.cookie = `${key}=;expires=${getDate(-1)}`
         }
     }
     static clearCookie() {
         if (typeof window !== 'undefined') {
-            const cookieObj = getCookieObject(window.documentcookie)
+            const cookieObj = getCookieObject(window.document.cookie)
             for (let key in cookieObj) {
-                window.documentcookie = `${key}=;expires=${getDate(-1)}`
+                window.document.cookie = `${key}=;expires=${getDate(-1)}`
             }
         }
     }
