@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/login');
+    await page.goto('https://p1ui.vercel.app/login');
     await page.waitForTimeout(3000)
 });
 
@@ -30,7 +30,7 @@ test('login', async ({ page }) => {
     await page.fill("#pwd", "u1234")
     // await page.waitForTimeout(3000)
     await page.getByRole("button", { name: "Login" }).click()
-    await page.waitForURL("http://localhost:3000/")
+    await page.waitForURL("https://p1ui.vercel.app/")
     await page.waitForTimeout(3000)
     await page.goto(page.url())
 })

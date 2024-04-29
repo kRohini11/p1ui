@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test"
 
 test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/login')
+    await page.goto('https://p1ui.vercel.app/login')
     await page.waitForTimeout(3000)
 });
 
@@ -36,6 +36,6 @@ test("menu items", async ({ page }) => {
     const okBtn = await page.getByRole("button", { name: "OK" })
     await expect(okBtn).toBeVisible()
     await okBtn.click();
-    await page.waitForURL("http://localhost:3000/login")
+    await page.waitForURL("https://p1ui.vercel.app/login")
     await page.waitForTimeout(3000)
 })
